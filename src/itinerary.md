@@ -1,4 +1,2 @@
 to do: 
-- print thumbnail in dom
-- make queryselector for input
-- 
+- add status for errors

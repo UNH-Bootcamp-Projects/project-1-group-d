@@ -3,35 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/app.js" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Scada&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link rel="stylesheet" href="src/style.css"/>
     <title>Dare DEVils</title>
   </head>
-  <body>
-    <header class="center-align">Dare DEVils Archive</header>
+  <body class="container">
+    <header class="center-align">
+      <a href="https://www.marvel.com" target="_blank"><h1>Dare<span style="color: red">DEV</span>ils Archive</h1></a>
+    </header>
 
     <main>
-      <div class="container">
-        <label>Browser Select</label>
-        <select class="browser-default">
-          <option value="" disabled selected>Choose your MARVEL Superhero:</option>
-          <option value="1">Iron Man</option>
-          <option value="2">DareDevil</option>
-          <option value="3">Spiderman</option>
-        </select>
-        
-        <form id="input-form">
-          <input type="text" id="input">
-          <input type="submit" value="Submit">
-        </form>
+      <div class="icon1">
+        <img class="spiderman" width="225" src="src/images/smheader.png">
       </div>
+
+      <div class="container options">
+        <div class="row">
+          <form id="input-form">
+            <label style="font-size: 18px; color: #fff;">Select a Superhero to Learn More!</label>
+            <select class="browser-default" id="input">
+              <option disabled selected>Choose a hero...</option>
+              <option>Iron Man</option>
+              <option>DareDevil</option>
+              <option>Spider-Man</option>
+            </select>
+            <button id="button" class="btn waves-effect waves-dark " type="submit" name="action">Go!
+              <i class="material-icons right"></i>
+            </button>
+          </form>
+        </div>
+    </div>
+    <div class="icon2">
+      <img class="ironman" width="225" src="src/images/imheader.png">
     </div>
     </main>
-
-    <footer></footer>
+    <footer>
+      <div id="footer">
+        <a href="https://www.marvel.com" target="_blank"><img class="materialboxed" width="100" src="src/images/marvel.png"></a>
+      </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
