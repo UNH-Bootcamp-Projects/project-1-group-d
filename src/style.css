@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'Scada', sans-serif;
+  font-family: "Scada", sans-serif;
   background-color: lightgrey;
 }
 
@@ -26,7 +26,7 @@ header h1 {
 }
 
 a {
-  color: white
+  color: white;
 }
 
 main {
@@ -71,7 +71,8 @@ footer {
     bottom: 0;
   }
 
-  .icon1, .icon2 {
+  .icon1,
+  .icon2 {
     display: none;
   }
 }
