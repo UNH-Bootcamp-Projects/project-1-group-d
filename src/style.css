@@ -6,6 +6,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   font-family: 'Scada', sans-serif;
+  background-color: lightgrey;
 }
 
 header {
@@ -24,6 +25,10 @@ header h1 {
   font-size: 3rem;
 }
 
+a {
+  color: white
+}
+
 main {
   position: relative;
   display: flex;
@@ -37,14 +42,14 @@ main {
   margin-left: 50px;
 }
 
-.container {
+.options {
   position: relative;
   width: 400px;
   background-color: #333;
   color: #fff;
   border: 2px solid red;
   border-radius: 5px;
-  box-shadow: lightgrey 10px 10px 10px;
+  box-shadow: grey 10px 10px 10px;
   padding: 50px;
 }
 
@@ -58,4 +63,15 @@ footer {
 #footer {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .icon1, .icon2 {
+    display: none;
+  }
 }
