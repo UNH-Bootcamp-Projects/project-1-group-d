@@ -42,15 +42,30 @@ main {
   margin-left: 50px;
 }
 
+label {
+  text-align: center;
+}
+
 .options {
   position: relative;
   width: 400px;
   background-color: #333;
   color: #fff;
-  border: 2px solid red;
+  border: 2px solid white;
   border-radius: 5px;
   box-shadow: grey 10px 10px 10px;
   padding: 50px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: red !important;
+  margin-top: 35px;
+  border-radius: 10px !important;
 }
 
 footer {

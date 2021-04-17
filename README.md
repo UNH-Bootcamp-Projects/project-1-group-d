@@ -3,7 +3,7 @@
 ##![DareDEVils Archive Image](src/img/image.png)
 
 
-Link to live website: (https://https://abalcs.github.io/Day-Planner/)
+Link to live website: (https://abalcs.github.io/Day-Planner/)
 
 ## Purpose
 
