@@ -1,4 +1,2 @@
-var hello = "hello";
-
 
 

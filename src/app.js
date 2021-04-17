@@ -10,6 +10,7 @@ function getMarvelApi () {
         return response.json();
     })
     .then(function(data) {
+      console.log(data);
       console.log(data.data.results[0].description);
     })
 }
