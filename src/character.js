@@ -1,3 +1,9 @@
+// Queryselectors
+var charIMG = document.querySelector("#charimg");
+var searchBox = document.querySelector("#search");
+var bioBox = document.querySelector("#bio");
+var mediaBox = document.querySelector("#media");
+
 function getParams() {
     var searchParameters = document.location.search.split('&');
 
@@ -19,9 +25,14 @@ function getMarvelApi (heroInput) {
     .then(function(data) {
       console.log(data);
       console.log(data.data.results[0].description);
+      
       var img = document.createElement('img');
-      img.src = data.data.results[0].thumbnail.path + '/landscape_medium.jpg';
-      //document.getElementsByClassName('container')[0].appendChild(img)
+      img.src = data.data.results[0].thumbnail.path + '/portrait_fantastic.jpg';
+      charIMG.appendChild(img);
+      
+      var biograpghy = document.createElement('p');
+      biograpghy.textContent = data.data.results[0].description;
+      bioBox.appendChild(biograpghy);
     })
 }
 
@@ -36,9 +47,20 @@ function getOMDBApi (heroInput) {
     .then(function(data) {
         console.log(data);
         console.log(data.Title);
-        if (data.Poster) {
-            console.log(data.Poster);
-        }
+        // if (data.Poster) {
+        //     console.log(data.Poster);
+        // }
+        var disclaimer = document.createElement("h5");
+        disclaimer.textContent = "First Titular Film";
+        mediaBox.appendChild(disclaimer)
+
+        var moviePoster = document.createElement("img");
+        moviePoster.src = data.Poster;
+        mediaBox.appendChild(moviePoster);
+
+        var moviePlot = document.createElement("p");
+        moviePlot.textContent = "Plot: " + data.Plot;
+        mediaBox.appendChild(moviePlot);
     })
 }
 
