@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Scada', sans-serif;
+}
+  
+
+main {
+    height: 100vh;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/marvelBackground.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
