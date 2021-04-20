@@ -1,24 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <header class="" style="width: 100%">
-    <h1>Character Info Page!</h1>
-    <a href="index.html" target="_blank"><li style="float:right">Home</li></a>
+<!-- 
+- Jumbotron/Title (is this the Character Name)
+-Nav bar
+-Aside
+  - Character Photo
+  - Maybe extra basic info container? Is that included?
+  - New Search form
+-Main/Body
+  -Two divs
+    - One Div Marvel API
+    - One Div Movie API
+    - Possible toggle/compress/accordion feature
+-Footer
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Scada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/character.css"/>
+   <title>Document</title>
+   <style>
+     div {background-color: white;}
+   </style>
+ </head>
+ <body class="section grey darken-3">
+  <header>
+    <h2 style="color: red">"Placeholder for Styling Purposes"</h2>
+    <div class="navbar">
+      <nav class="black">
+        <div class="container">
+          <div class="nav-wrapper">
+            <ul class="right-align" id="navList">
+              <a class= "btn-large waves-effect waves-light red">Go Back</a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      </div>
   </header>
   <main class="container">
-    <aside id="charimg">
-    </aside>
-    <div id="search">
-    </div>
-    <div id="bio">
-    </div>
-    <div id="media">
-    </div>
-  <script src="src/character.js"></script>
-</body>
-</html>
+    <div id="charimg"></div>
+    <div id="search"></div>
+    <div id="bio"></div>
+    <div id="media"></div>
+  </main>
+ </body>
+ <footer>
+ </footer>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ <script src="src/character.js"></script>
+ </html>
+

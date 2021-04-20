@@ -1,3 +1,5 @@
+var allCharactersArray = ["Iron Man", "Daredevil", "Spider-Man", "Hulk", "Thor", "Captain America", "", ];
+
 function handleSearchForm(event) {
   event.preventDefault();
 
