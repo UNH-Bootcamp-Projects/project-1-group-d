@@ -21,7 +21,7 @@ function getMarvelApi (heroInput) {
       console.log(data.data.results[0].description);
       var img = document.createElement('img');
       img.src = data.data.results[0].thumbnail.path + '/landscape_medium.jpg';
-      document.getElementsByClassName('container')[0].appendChild(img)
+      //document.getElementsByClassName('container')[0].appendChild(img)
     })
 }
 
