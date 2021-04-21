@@ -1,61 +1,54 @@
-<!-- 
-- Jumbotron/Title (is this the Character Name)
--Nav bar
--Aside
-  - Character Photo
-  - Maybe extra basic info container? Is that included?
-  - New Search form
--Main/Body
-  -Two divs
-    - One Div Marvel API
-    - One Div Movie API
-    - Possible toggle/compress/accordion feature
--Footer
- -->
-
- <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Scada&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/character.css"/>
-   <title>Document</title>
-   <style>
-     div {background-color: white;}
-   </style>
- </head>
- <body class="section grey darken-3">
-  <header>
-    <h2 style="color: red">"Placeholder for Styling Purposes"</h2>
-    <div class="navbar">
-      <nav class="black">
-        <div class="container">
-          <div class="nav-wrapper">
-            <ul class="right-align" id="navList">
-              <a class= "btn-large waves-effect waves-light red">Go Back</a>
-            </ul>
-          </div>
-        </div>
-      </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+   />
+   <link href="https://fonts.googleapis.com/css2?family=Scada&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="src/character.css"/>
+  <title>Document</title>
+</head>
+<body class="section grey darken-3">
+ <header>
+   <h2 style="color: red">"Placeholder for Styling Purposes"</h2>
+   <div class="navbar">
+     <nav class="black">
+       <div class="container"></div>
+         <div class="nav-wrapper">
+           <ul class="right-align" id="navList">
+             <a class= "btn-large waves-effect waves-light red">Go Back</a>
+           </ul>
+         </div>
+       </div>
+     </nav>
+     </div>
+ </header>
+ <main class="section" id="main">
+   <div class="row">
+     <div class="col s12 l7"><span class="flow-text"></span>
+       <div class="card horizontal">
+         <div class="card-content" id="charimg"></div>
+       </div>
+       <div class="card horizontal">
+        <div class="card-content" id="bio"></div>
       </div>
-  </header>
-  <main class="container">
-    <div id="charimg"></div>
-    <div id="search"></div>
-    <div id="bio"></div>
-    <div id="media"></div>
-  </main>
- </body>
- <footer>
- </footer>
+     </div>
+     <div class="col s12 l5"><span class="flow-text"></span>
+      <div class="card horizontal">
+        <div class="card-content" id="media"></div>
+      </div>
+     </div>
+   </div>
+ </main>
+</body>
+<footer>
+  <div class="container"></div>
+</footer>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
- <script src="src/character.js"></script>
- </html>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="src/character.js"></script>
+</html>

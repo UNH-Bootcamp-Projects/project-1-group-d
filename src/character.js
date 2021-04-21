@@ -27,13 +27,33 @@ function getMarvelApi (heroInput) {
       console.log(data.data.results[0].description);
       
       var img = document.createElement('img');
-      img.src = data.data.results[0].thumbnail.path + '/portrait_fantastic.jpg';
+      img.src = data.data.results[0].thumbnail.path + '/landscape_amazing.jpg';
       charIMG.appendChild(img);
       
       var biograpghy = document.createElement('p');
       biograpghy.innerHTML = data.data.results[0].description + "<br><a href=\"" + data.data.results[0].urls[1].url + "\">Read More<a>";
       bioBox.appendChild(biograpghy);
     })
+
+    // let requestComicUrl = "https://gateway.marvel.com:443/v1/public/characters?comics=" + heroInput + "&orderBy=name&apikey=" + apikey + "&ts=1&hash=6262a02cba8e28cbd51f531c1e20a49f";
+
+    // fetch(requestComicUrl)
+    // .then(function(response) {
+    //     return response.json();
+    // })
+    // .then(function(data) {
+    //     console.log(data);
+    //     console.log(data.data.results[0].thumbnail);
+        
+    //     var disclaimer = document.createElement("h5");
+    //     disclaimer.textContent = "Comics";
+    //     mediaBox.appendChild(disclaimer)
+
+    //     var ComicImg = document.createElement('img');
+    //     ComicImg.src = data.data.results[0].thumbnail.path + '/landscape_amazing.jpg';
+    //     mediaBox.appendChild(ComicImg);
+    // })
+
 }
 
 function getOMDBApi (heroInput) {
