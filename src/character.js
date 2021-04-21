@@ -3,9 +3,9 @@ var charIMG = document.querySelector("#charimg");
 var searchBox = document.querySelector("#search");
 var bioBox = document.querySelector("#bio");
 var mediaBox = document.querySelector("#media");
+var comicsBox = document.querySelector("#comics");
 var pageTitle = document.querySelector("#character-title");
-
-
+      
 
 function getParams() {
     var searchParameters = document.location.search.split('&');
@@ -35,6 +35,10 @@ function getMarvelApi (heroInput) {
       var img = document.createElement('img');
       img.src = data.data.results[0].thumbnail.path + '/landscape_amazing.jpg';
       charIMG.appendChild(img);
+
+      var disclaimer = document.createElement("h5");
+      disclaimer.textContent = "Biography";
+      bioBox.appendChild(disclaimer)
       
       var biograpghy = document.createElement('p');
       if(data.data.results[0].description != "") {
@@ -58,11 +62,17 @@ function getMarvelApi (heroInput) {
         
         var disclaimer = document.createElement("h5");
         disclaimer.textContent = "Comics";
-        mediaBox.appendChild(disclaimer)
+        comicsBox.appendChild(disclaimer)
 
-        var ComicImg = document.createElement('img');
-        ComicImg.src = data.data.results[0].thumbnail.path + '/portrait_incredible.jpg';
-        mediaBox.appendChild(ComicImg);
+        var ComicImg;
+
+        for(var i = 0; i < data.data.results.length; ++i) {
+            if(data.data.results[i].thumbnail.path != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available") {
+                ComicImg = document.createElement('img');
+                ComicImg.src = data.data.results[i].thumbnail.path + "/portrait_incredible.jpg";
+                comicsBox.appendChild(ComicImg);
+            }
+        }
     })
 
 }
@@ -78,9 +88,7 @@ function getOMDBApi (heroInput) {
     .then(function(data) {
         console.log(data);
         console.log(data.Title);
-        // if (data.Poster) {
-        //     console.log(data.Poster);
-        // }
+        
         var disclaimer = document.createElement("h5");
         disclaimer.textContent = "First Titular Film";
         mediaBox.appendChild(disclaimer)
