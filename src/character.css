@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font-family: 'Scada', sans-serif;
+  background-color: #222;
+}
+
+header {
+  text-align: center;
+  color: white;
+  margin-top: -40px;
+}
+
+#button {
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+a:hover {
+  background-color: rgb(182, 10, 10) !important;
+  color: yellow;
+}
+
+
+main {
+  height: 100vh;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/marvelBackground.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.card {
+  box-shadow: 5px 5px 10px black;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  width: 100%;
+  margin-bottom: -15px;
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
+}

@@ -1,11 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
-</html>
+<!-- 
+- Jumbotron/Title (is this the Character Name)
+-Nav bar
+-Aside
+  - Character Photo
+  - Maybe extra basic info container? Is that included?
+  - New Search form
+-Main/Body
+  -Two divs
+    - One Div Marvel API
+    - One Div Movie API
+    - Possible toggle/compress/accordion feature
+-Footer
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Scada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/character.css"/>
+    <link rel="shortcut icon" href="src/images/avengers.ico" type="image/x-icon">
+    <link rel="icon" href="src/images/avengers.ico" type="image/x-icon"> 
+   <title>DareDEVils - Character Page</title>
+ </head>
+ <body class="section">
+  <header>
+    <h2>Character Name Here</h2>
+    <a href="index.html" class= "btn-large waves-effect waves-light red" id="button">Go Back</a>
+  </header>
+
+  <main class="section" id="main">
+    <div class="row">
+      <div class="col s7 push-s5"><span class="flow-text"></span>
+        <div class="card horizontal">
+          <div class="card-content">
+            <p></p>
+          </div>
+        </div>
+        <div class="card horizontal">
+          <div class="card-content">
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="col s5 pull-s7"><span class="flow-text"></span>
+        <div class="card horizontal">
+            <div class="card-content">
+              <p></p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+ </body>
+ <footer id="footer">
+    <a href="https://www.marvel.com" target="_blank"><img class="materialboxed" width="100" src="src/images/marvel.png"></a>
+</footer>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ </html>
