@@ -5,6 +5,8 @@ var bioBox = document.querySelector("#bio");
 var mediaBox = document.querySelector("#media");
 var pageTitle = document.querySelector("#character-title");
 
+
+
 function getParams() {
     var searchParameters = document.location.search.split('&');
 
@@ -27,6 +29,7 @@ function getMarvelApi (heroInput) {
       console.log(data);
       console.log(data.data.results[0].description);
 
+      document.title = "Dare DEVils: " + data.data.results[0].name;
       pageTitle.textContent = data.data.results[0].name;
       
       var img = document.createElement('img');
