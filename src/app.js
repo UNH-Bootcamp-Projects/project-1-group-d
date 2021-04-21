@@ -1,4 +1,6 @@
-var allCharactersArray = ["Iron Man", "Daredevil", "Spider-Man", "Hulk", "Thor", "Captain America", "", ];
+var allCharactersArray = ["Iron Man", "Daredevil", "Spider-Man", "Hulk", "Thor", "Captain America", "Doctor Strange", "Black Panther", "Wolverine"];
+var inputForm = document.querySelector("#input");
+var heroSelect;
 
 function handleSearchForm(event) {
   event.preventDefault();
@@ -22,6 +24,12 @@ function handleSearchForm(event) {
       location.assign(queryString);
     }
   })
+}
+
+for(var i = 0; i < allCharactersArray.length; ++i) {
+  heroSelect = document.createElement("option");
+  heroSelect.textContent = allCharactersArray[i];
+  inputForm.appendChild(heroSelect);
 }
 
 document.querySelector("#input-form").addEventListener('submit', handleSearchForm);

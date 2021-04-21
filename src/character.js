@@ -31,28 +31,33 @@ function getMarvelApi (heroInput) {
       charIMG.appendChild(img);
       
       var biograpghy = document.createElement('p');
-      biograpghy.innerHTML = data.data.results[0].description + "<br><a href=\"" + data.data.results[0].urls[1].url + "\">Read More<a>";
+      if(data.data.results[0].description != "") {
+        biograpghy.innerHTML = data.data.results[0].description + "<br><a href=\"" + data.data.results[0].urls[1].url + "\">Read More<a>";
+      }
+      else {
+        biograpghy.innerHTML = "This character is missing a description from the Marvel API. However, you can still read more about them here: <a href=\"" + data.data.results[0].urls[1].url + "\">Read More<a>";
+      }
       bioBox.appendChild(biograpghy);
     })
 
-    // let requestComicUrl = "https://gateway.marvel.com:443/v1/public/characters?comics=" + heroInput + "&orderBy=name&apikey=" + apikey + "&ts=1&hash=6262a02cba8e28cbd51f531c1e20a49f";
+    let requestComicUrl = "https://gateway.marvel.com:443/v1/public/comics?title=" + heroInput + "&orderBy=title&apikey=" + apikey + "&ts=1&hash=6262a02cba8e28cbd51f531c1e20a49f";
 
-    // fetch(requestComicUrl)
-    // .then(function(response) {
-    //     return response.json();
-    // })
-    // .then(function(data) {
-    //     console.log(data);
-    //     console.log(data.data.results[0].thumbnail);
+    fetch(requestComicUrl)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        console.log(data);
+        console.log(data.data.results[0].thumbnail);
         
-    //     var disclaimer = document.createElement("h5");
-    //     disclaimer.textContent = "Comics";
-    //     mediaBox.appendChild(disclaimer)
+        var disclaimer = document.createElement("h5");
+        disclaimer.textContent = "Comics";
+        mediaBox.appendChild(disclaimer)
 
-    //     var ComicImg = document.createElement('img');
-    //     ComicImg.src = data.data.results[0].thumbnail.path + '/landscape_amazing.jpg';
-    //     mediaBox.appendChild(ComicImg);
-    // })
+        var ComicImg = document.createElement('img');
+        ComicImg.src = data.data.results[0].thumbnail.path + '/portrait_incredible.jpg';
+        mediaBox.appendChild(ComicImg);
+    })
 
 }
 
