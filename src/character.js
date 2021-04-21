@@ -1,6 +1,5 @@
 // Queryselectors
 var charIMG = document.querySelector("#charimg");
-var searchBox = document.querySelector("#search");
 var bioBox = document.querySelector("#bio");
 var mediaBox = document.querySelector("#media");
 var comicsBox = document.querySelector("#comics");
