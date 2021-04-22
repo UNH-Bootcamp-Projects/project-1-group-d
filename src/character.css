@@ -49,11 +49,11 @@ html {
 
 footer {
   position: absolute;
-  /* bottom: 0; */
   justify-content: center;
   background-color: #000;
   width: 100%;
-  /* margin-bottom: -15px; */
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1000px) {
