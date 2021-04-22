@@ -6,7 +6,13 @@ body {
   align-items: center;
   flex-wrap: wrap;
   font-family: "Scada", sans-serif;
-  background-color: lightgrey;
+  background-image: url('src/images/OpenGraph-TW-1200x630.png');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/OpenGraph-TW-1200x630.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
 }
 
 header {
@@ -19,6 +25,7 @@ header {
   width: 100%;
   background-color: #333;
   color: #fff;
+  opacity: .8;
 }
 
 .nav {
@@ -47,12 +54,12 @@ main {
   display: flex;
 }
 
-.spiderman {
-  margin-right: 50px;
+#input {
+  margin-bottom: 15px;
 }
 
-.ironman {
-  margin-left: 50px;
+#button {
+  margin-top: 3px;
 }
 
 label {
@@ -78,6 +85,7 @@ label {
 
   #button {
     width: 100px;
+    
   }
 
   #time {
@@ -117,10 +125,5 @@ footer p {
   footer {
     position: absolute;
     bottom: 0;
-  }
-
-  .icon1,
-  .icon2 {
-    display: none;
   }
 }
