@@ -5,7 +5,11 @@
 body {
     font-family: 'Scada', sans-serif;
 }
-  
+
+/* Important change */
+#history .btn {
+    margin-right: 10px;
+}
 
 main {
     height: 100vh;

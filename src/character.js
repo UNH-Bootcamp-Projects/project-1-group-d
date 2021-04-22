@@ -5,7 +5,7 @@ var bioBox = document.querySelector("#bio");
 var mediaBox = document.querySelector("#media");
 var comicsBox = document.querySelector("#comics");
 var pageTitle = document.querySelector("#character-title");
-      
+var historyBox = document.querySelector("#history");
 
 function getParams() {
     var searchParameters = document.location.search.split('&');
@@ -14,13 +14,13 @@ function getParams() {
 
     getMarvelApi(query);
     getOMDBApi(query);
+    localStorageHandling(query);
 }
 
 function getMarvelApi (heroInput) {
     let apikey = "8dc274afb84abf0f19f28c01d6ac7425";
     let requestUrl = "https://gateway.marvel.com:443/v1/public/characters?name=" + heroInput + "&orderBy=name&apikey=" + apikey + "&ts=1&hash=6262a02cba8e28cbd51f531c1e20a49f";
 
-    
     fetch(requestUrl)
     .then(function(response) {
         return response.json();
@@ -134,6 +134,38 @@ function getOMDBApi (heroInput) {
         seriesPlot.textContent = "Plot: " + data.Plot;
         mediaBox.appendChild(seriesPlot);
     })
+}
+
+function localStorageHandling(heroInput) {
+    var newInput = heroInput.replace("%20", " ");
+    var history = JSON.parse(localStorage.getItem("searchHistory"));
+
+    if(history) {
+        if(history.length >= 2) {
+            if(newInput != history[1] && newInput != history[2]) {
+                history[0] = history[1];
+                history[1] = history[2];
+                history[2] = newInput;
+            }
+        }
+        else {
+            history.push(newInput);
+        }
+    } else {
+        history = [newInput];
+    }
+
+    for(let i of history) {
+        var newElement = document.createElement("a");
+        newElement.classList.add("btn");
+        newElement.classList.add("waves-effect");
+        newElement.classList.add("waves-dark");
+        newElement.textContent = i;
+        newElement.href = "./character.html?q=" + i;
+        historyBox.appendChild(newElement);
+    }
+
+    localStorage.setItem("searchHistory", JSON.stringify(history));
 }
 
 getParams();

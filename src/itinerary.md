@@ -1,3 +1,3 @@
 to do: 
-- add status for errors
-- fill character html with doms of content
+- fix doctor strange and captain marvel problems
+- add local storage support
