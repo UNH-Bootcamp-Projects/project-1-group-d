@@ -3,56 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Scada&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Scada&display=swap"
+      rel="stylesheet"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
     <link rel="stylesheet" href="src/style.css"/>
     <link rel="shortcut icon" href="src/images/avengers.ico" type="image/x-icon">
     <link rel="icon" href="src/images/avengers.ico" type="image/x-icon">
     <title>DareDEVils</title>
   </head>
+  
   <body class="container">
     <header class="center-align">
-      <img display="inline-block" width="80"  src="src/images/wolv.png">  
-      <a href="https://www.marvel.com" target="_blank"><h1>Dare<span style="color: red">DEV</span>ils Archive</h1></a>
-      <img display="inline-block" width="60"  src="src/images/daredevil2.png">
-
-  
+      <img width="80" src="src/images/wolv.png" alt="wolverine image"> 
+      <div class="nav">
+        <a href="https://www.marvel.com" target="_blank" rel="noreferrer">
+        <h1>Dare<span>DEV</span>ils Archive</h1></a>
+        <p id="time"></p>
+      </div>
+      <img width="60" src="src/images/daredevil2.png" alt="daredevil image">
     </header>
 
     <main>
-
       <div class="container options">
-
         <div class="row">
-          
-          <label style="font-size: 18px; color: #fff;">Select a Superhero to Learn More!</label>
-          <select class="browser-default">
-            <option value="" disabled selected></option>
-            <option disabled selected>Choose a hero...</option>
-          </select>
-          <div class="center-align">
+          <form id="input-form" style="height: 250px">
+            <label style="font-size: 18px; color: #fff"
+              >Select a Superhero to Learn More!</label
+            >
+            <select class="browser-default" id="input">
+              <option disabled selected>Choose a hero...</option>
+            </select>
             <img src="src/images/hulk2.png" width="70"/>
-            <button id="button" class="btn-large waves-effect waves-dark" type="submit"  
-            style="background-color:transparent; border-color:transparent;" name="action">SMASH!
-            </button>  
-          </div>  
-
-          
+            <button
+              id="button"
+              class="btn waves-effect waves-dark"
+              type="submit"
+              name="action">
+              SMASH!
+              <i class="material-icons right"></i>
+            </button>
+          </form>
         </div>
-
-    </div>
-    </main>
-  
-    <footer>
-      <div id="footer">
-        <a href="https://www.marvel.com" target="_blank"><img width="100" src="src/images/marvel.png"></a>
       </div>
+    </main>
+
+    <footer>
+      <a href="https://www.marvel.com" target="_blank" rel="noreferrer"
+        ><img class="materialboxed" width="100" src="src/images/marvel.png" alt="marvel logo that links to official marvel homepage"
+      /></a>
+       <p>&#169</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="src/app.js"></script>
   </body>
 </html>

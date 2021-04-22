@@ -3,7 +3,7 @@
 ![DareDEVils Archive Image](src/images/image.png)
 
 
-Link to live website: (https://abalcs.github.io/Day-Planner/)
+Link to live website: (https://github.com/UNH-Bootcamp-Projects/project-1-group-d)
 
 ## Purpose
 
