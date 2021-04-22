@@ -5,7 +5,6 @@ var mediaBox = document.querySelector("#media");
 var comicsBox = document.querySelector("#comics");
 var pageTitle = document.querySelector("#character-title");
 
-
 function getParams() {
     var searchParameters = document.location.search.split('&');
 
@@ -18,7 +17,6 @@ function getParams() {
 function getMarvelApi (heroInput) {
     let apikey = "8dc274afb84abf0f19f28c01d6ac7425";
     let requestUrl = "https://gateway.marvel.com:443/v1/public/characters?name=" + heroInput + "&orderBy=name&apikey=" + apikey + "&ts=1&hash=6262a02cba8e28cbd51f531c1e20a49f";
-
 
     fetch(requestUrl)
     .then(function(response) {
@@ -77,6 +75,7 @@ function getMarvelApi (heroInput) {
         }
     })
 
+
 }
 
 function getOMDBApi (heroInput) {
@@ -125,6 +124,7 @@ function getOMDBApi (heroInput) {
         seriesPoster.src = data.Poster;
         mediaBox.appendChild(seriesPoster);
 
+
         var seriesDateInfo = document.createElement("p");
         seriesDateInfo.textContent = "Release Date: " + data.Released;
         mediaBox.appendChild(seriesDateInfo);
@@ -136,3 +136,9 @@ function getOMDBApi (heroInput) {
 }
 
 getParams();
+
+function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+  }
+

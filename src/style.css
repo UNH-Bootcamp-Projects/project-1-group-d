@@ -23,12 +23,14 @@ header {
   top: 0px;
   width: 100%;
   background-color: #333;
+  background-image: radial-gradient( circle, rgb(110, 110, 110) 5%, rgba(51, 51, 51) 95% );
   color: #fff;
   opacity: .8;
 }
 
 .nav {
   width: 30em;
+  text-shadow: 2px 2px black;
 }
 
 header h1 {
@@ -63,18 +65,51 @@ main {
 
 label {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 2rem;
+}
+
+img {
+ margin: 0;
+ margin-top: 10px;
+ padding: 0;
 }
 
 .options {
   position: relative;
   width: 400px;
   background-color: #333;
+  background-image: radial-gradient( circle, rgb(110, 110, 110) 10%, rgba(51, 51, 51) 90% );
   text-align: center;
   color: #fff;
+  text-shadow: 2px 2px black;
   border: 2px solid white;
   border-radius: 5px;
   box-shadow: grey 10px 10px 10px;
-  padding: 50px;
+  padding: 40px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+@media screen and (max-width: 400px) {
+  .options {
+    width: 200px;
+  }
+
+  #button {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .options {
+    width: 200px;
+  }
+
+  #button {
+    width: 100px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -105,17 +140,17 @@ button {
   margin-top: 35px;
   border-radius: 10px !important;
   width: 21em;
+  text-shadow: 2px 2px black;
+  width: 50;
+  margin: 0;
+  padding: 0;
 }
 
 
 footer {
   position: absolute;
   bottom: 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: white;
-  background-color: #000;
+  background-image: radial-gradient( circle, rgb(0, 0, 0) 40%, transparent 60% );
   width: 100%;
 }
 
@@ -127,5 +162,9 @@ footer p {
   footer {
     position: absolute;
     bottom: 0;
+  }
+
+  img {
+    display: none;
   }
 }

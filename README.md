@@ -1,6 +1,6 @@
 # DareDEVils Archive
 
-##![DareDEVils Archive Image](src/img/image.png)
+![DareDEVils Archive Image](src/images/image.png)
 
 
 Link to live website: (https://github.com/UNH-Bootcamp-Projects/project-1-group-d)

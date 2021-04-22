@@ -15,18 +15,18 @@ var heroSelect;
 let weekDay = moment();
 $("#time").text(weekDay.format("dddd, MMMM Do YYYY hh:mm A"));
 
-
-
 function handleSearchForm(event) {
   event.preventDefault();
 
   var heroInput = document.querySelector("#input").value;
   if (!heroInput) {
+
     console.error("No blank inputs allowed");
     return;
   }
 
   let apikey = "8dc274afb84abf0f19f28c01d6ac7425";
+
   let requestUrl =
     "https://gateway.marvel.com:443/v1/public/characters?name=" +
     heroInput +
@@ -47,11 +47,11 @@ function handleSearchForm(event) {
 }
 
 for (var i = 0; i < allCharactersArray.length; ++i) {
+
   heroSelect = document.createElement("option");
   heroSelect.textContent = allCharactersArray[i];
   inputForm.appendChild(heroSelect);
 }
+ 
+document.querySelector("#input-form").addEventListener('submit', handleSearchForm);
 
-document
-  .querySelector("#input-form")
-  .addEventListener("submit", handleSearchForm);
