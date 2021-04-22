@@ -59,8 +59,25 @@ main {
   margin-bottom: 15px;
 }
 
+#input-form {
+  width: 250px;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #button {
-  margin-top: 3px;
+  width: 100px;
+  margin-top: 50px;
+}
+
+#button:hover {
+  color: yellow;
+  border: 1px solid yellow;
+  background-color: rgb(182, 10, 10) !important;
 }
 
 label {
@@ -78,7 +95,7 @@ img {
 
 .options {
   position: relative;
-  width: 400px;
+  width: 325px;
   background-color: #333;
   background-image: radial-gradient( circle, rgb(110, 110, 110) 10%, rgba(51, 51, 51) 90% );
   text-align: center;
@@ -118,11 +135,8 @@ img {
     height: 420px
   }
 
-
-
   #button {
     width: 100px;
-    
   }
 
   #time {
@@ -152,10 +166,18 @@ footer {
   bottom: 0px;
   background-image: radial-gradient( circle, rgb(0, 0, 0) 40%, transparent 60% );
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 footer p {
   margin-top: 17px;
+  color: white;
+  margin-top: 30px
+}
+
+footer img {
+  margin-bottom: 10px
 }
 
 @media screen and (max-width: 1000px) {
