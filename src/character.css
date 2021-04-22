@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 body {
@@ -15,6 +14,7 @@ header {
   margin-top: -40px;
   padding-top: 20px;
   background-color: #222;
+  opacity: .8;
 }
 
 #button {
@@ -23,11 +23,14 @@ header {
   margin-bottom: 20px;
 }
 
+#button:hover {
+  border-color: yellow;
+}
+
 a:hover {
   background-color: rgb(182, 10, 10) !important;
   color: yellow;
 }
-
 
 html {
   height: 100vh;
@@ -36,7 +39,7 @@ html {
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
-  /* z-index: -1; */
+  scroll-behavior: smooth;
 }
 
 .card {
@@ -45,6 +48,18 @@ html {
 
 #charimg img, #bio img, #media img {
   width: 100%;
+}
+
+#biopic {
+  display: flex;
+  justify-content: center;
+}
+
+.scrollup {
+  display: flex;
+  justify-content: center;
+  color: white !important;
+  
 }
 
 footer {

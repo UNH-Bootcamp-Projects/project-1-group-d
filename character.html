@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Scada&display=swap"
       rel="stylesheet"
@@ -21,12 +22,12 @@
     <link rel="icon" href="src/images/" type="image/x-icon" />
     <title>DareDEVils - Character Page</title>
   </head>
-  <body class="section">
+  <body id="top" class="section">
     <header>
       <h2 id="character-title"></h2>
       <a
         href="index.html"
-        class="btn-large waves-effect waves-light red"
+        class="btn-small waves-effect waves-light red"
         id="button"
         >Go Back</a
       >
@@ -36,7 +37,7 @@
       <div class="row">
         <div class="col s7 push-s5">
           <span class="flow-text"></span>
-          <div class="card horizontal">
+          <div class="card horizontal" id="biopic" >
             <div id="charimg" class="card-content">
               <p></p>
             </div>
@@ -62,6 +63,10 @@
         </div>
       </div>
     </main>
+
+    <div class="scrollup">
+      <a href="#top"><i class="large material-icons" >keyboard_arrow_up</i></a>
+    </div>
 
     <footer>
       <a href="https://www.marvel.com" target="_blank"
