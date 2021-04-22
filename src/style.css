@@ -6,7 +6,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   font-family: "Scada", sans-serif;
-  background-image: url('src/images/OpenGraph-TW-1200x630.png');
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/OpenGraph-TW-1200x630.png');
   background-position: center;
   background-size: cover;
@@ -81,7 +80,10 @@ label {
 @media screen and (max-width: 400px) {
   .options {
     width: 200px;
+    height: 420px
   }
+
+
 
   #button {
     width: 100px;
