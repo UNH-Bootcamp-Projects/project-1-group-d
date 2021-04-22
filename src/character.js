@@ -115,3 +115,9 @@ function getOMDBApi (heroInput) {
 }
 
 getParams();
+
+
+function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+  }
