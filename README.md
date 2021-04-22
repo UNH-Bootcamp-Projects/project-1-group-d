@@ -1,6 +1,6 @@
 # DareDEVils Archive
 
-##![DareDEVils Archive Image](src/img/image.png)
+![DareDEVils Archive Image](src/images/image.png)
 
 
 Link to live website: (https://abalcs.github.io/Day-Planner/)

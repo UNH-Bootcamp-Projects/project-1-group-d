@@ -81,6 +81,16 @@ img {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .options {
+    width: 200px;
+  }
+
+  #button {
+    width: 100px;
+  }
+}
+
 .row {
   display: flex;
   flex-direction: column;
@@ -94,6 +104,7 @@ button {
   width: 50;
   margin: 0;
   padding: 0;
+
 }
 
 footer {
