@@ -1,4 +1,4 @@
-var allCharactersArray = ["Iron Man", "Daredevil", "Spider-Man", "Hulk", "Thor", "Captain America", "Wolverine"];
+var allCharactersArray = ["Iron Man", "Daredevil", "Spider-Man", "Hulk", "Thor", "Captain America", "Wolverine", "Deadpool"];
 var inputForm = document.querySelector("#input");
 var heroSelect;
 
@@ -33,3 +33,4 @@ for(var i = 0; i < allCharactersArray.length; ++i) {
 }
 
 document.querySelector("#input-form").addEventListener('submit', handleSearchForm);
+

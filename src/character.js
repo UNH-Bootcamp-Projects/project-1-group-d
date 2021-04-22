@@ -68,9 +68,12 @@ function getMarvelApi (heroInput) {
 
         for(var i = 0; i < data.data.results.length; ++i) {
             if(data.data.results[i].thumbnail.path != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available") {
+                ComicLink = document.createElement('a')
+                ComicLink.href = data.data.results[i].urls[0].url;
                 ComicImg = document.createElement('img');
                 ComicImg.src = data.data.results[i].thumbnail.path + "/portrait_incredible.jpg";
-                comicsBox.appendChild(ComicImg);
+                ComicLink.appendChild(ComicImg)
+                comicsBox.appendChild(ComicLink);
             }
         }
     })
