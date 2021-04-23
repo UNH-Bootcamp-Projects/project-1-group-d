@@ -94,22 +94,32 @@ function getOMDBApi (heroInput) {
         console.log(data.Title);
 
         var movieBox = document.querySelector("#titular-movie");
+        if(data.Title) {
+            var disclaimer = document.createElement("h5");
+            disclaimer.textContent = "First Titular Film";
+            movieBox.appendChild(disclaimer)
+
+            var moviePoster = document.createElement("img");
+            moviePoster.src = data.Poster;
+            movieBox.appendChild(moviePoster);
+
+            var movieDateInfo = document.createElement("p");
+            movieDateInfo.textContent = "Release Date: " + data.Released;
+            movieBox.appendChild(movieDateInfo);
+
+            var moviePlot = document.createElement("p");
+            moviePlot.textContent = "Plot: " + data.Plot;
+            movieBox.appendChild(moviePlot);
+        } else {
+            var disclaimer = document.createElement("h5");
+            disclaimer.textContent = "There are no movie results.";
+            seriesBox.appendChild(disclaimer)
+
+            var seriesMessage = document.createElement("p");
+            seriesMessage.textContent = "This will be updated when " + heroInput + " gets their own movie!";
+            seriesBox.appendChild(seriesMessage);
+        }
         
-        var disclaimer = document.createElement("h5");
-        disclaimer.textContent = "First Titular Film";
-        movieBox.appendChild(disclaimer)
-
-        var moviePoster = document.createElement("img");
-        moviePoster.src = data.Poster;
-        movieBox.appendChild(moviePoster);
-
-        var movieDateInfo = document.createElement("p");
-        movieDateInfo.textContent = "Release Date: " + data.Released;
-        movieBox.appendChild(movieDateInfo);
-
-        var moviePlot = document.createElement("p");
-        moviePlot.textContent = "Plot: " + data.Plot;
-        movieBox.appendChild(moviePlot);
     })
 
     requestOMDBUrl = "https://www.omdbapi.com/?t=" + heroInput + "&type=series&apikey=" + OMDBkey;
@@ -122,22 +132,33 @@ function getOMDBApi (heroInput) {
         console.log(data.Title);
 
         var seriesBox = document.querySelector("#titular-series");
-        
-        var disclaimer = document.createElement("h5");
-        disclaimer.textContent = "First Titular series";
-        seriesBox.appendChild(disclaimer)
-        
-        var seriesPoster = document.createElement("img");
-        seriesPoster.src = data.Poster;
-        seriesBox.appendChild(seriesPoster);
-        
-        var seriesDateInfo = document.createElement("p");
-        seriesDateInfo.textContent = "Release Date: " + data.Released;
-        seriesBox.appendChild(seriesDateInfo);
+        if(data.Title) {
+            var disclaimer = document.createElement("h5");
+            disclaimer.textContent = "First Titular series";
+            seriesBox.appendChild(disclaimer)
+            
+            var seriesPoster = document.createElement("img");
+            seriesPoster.src = data.Poster;
+            seriesBox.appendChild(seriesPoster);
+            
+            var seriesDateInfo = document.createElement("p");
+            seriesDateInfo.textContent = "Release Date: " + data.Released;
+            seriesBox.appendChild(seriesDateInfo);
 
-        var seriesPlot = document.createElement("p");
-        seriesPlot.textContent = "Plot: " + data.Plot;
-        seriesBox.appendChild(seriesPlot);
+            var seriesPlot = document.createElement("p");
+            seriesPlot.textContent = "Plot: " + data.Plot;
+            seriesBox.appendChild(seriesPlot);
+        } else {
+            var disclaimer = document.createElement("h5");
+            disclaimer.textContent = "There are no series results.";
+            seriesBox.appendChild(disclaimer)
+
+            var seriesMessage = document.createElement("p");
+            seriesMessage.textContent = "This will be updated when " + heroInput.replace("%20", " ") + " gets their own series!";
+            seriesBox.appendChild(seriesMessage);
+            
+        }
+        
     })
 }
 
