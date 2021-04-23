@@ -177,3 +177,8 @@ function localStorageHandling(heroInput) {
 }
 
 getParams();
+
+function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+  }
