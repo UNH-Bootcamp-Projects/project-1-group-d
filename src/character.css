@@ -46,7 +46,7 @@ html {
   box-shadow: 5px 5px 10px black;
 }
 
-#charimg img, #bio img, #media img {
+#charimg img, #bio img, #media img, #titular-series img, #titular-movie img {
   width: 100%;
 }
 
@@ -69,6 +69,10 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+#history .btn {
+    margin-right: 10px;
 }
 
 @media screen and (max-width: 1000px) {
