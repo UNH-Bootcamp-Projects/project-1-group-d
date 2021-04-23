@@ -221,7 +221,6 @@ img {
 
   #input-form {
     width: 120px;
-    
   }
 
   #button {
@@ -240,6 +239,15 @@ img {
   .hulk {
     margin-top: -5px;
     margin-left: -20px
+  }
+
+  #input {
+    width: 140px;
+    margin-left: -5px
+  }
+
+  .row {
+    width: 150px
   }
 }
 
