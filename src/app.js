@@ -20,7 +20,7 @@ function handleSearchForm(event) {
   event.preventDefault();
 
   var heroInput = document.querySelector('#input').value;
-  if(!heroInput) {
+  if(!heroInput || heroInput === "Choose a hero...") {
     console.error("No blank inputs allowed");
     return;
   }
