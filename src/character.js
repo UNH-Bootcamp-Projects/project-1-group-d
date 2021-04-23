@@ -83,7 +83,7 @@ function getMarvelApi (heroInput) {
 
 function getOMDBApi (heroInput) {
     let OMDBkey = "9bb482ed"
-    let requestOMDBUrl = "http://www.omdbapi.com/?t=" + heroInput + "&type=movie&apikey=" + OMDBkey;
+    let requestOMDBUrl = "https://www.omdbapi.com/?t=" + heroInput + "&type=movie&apikey=" + OMDBkey;
 
     fetch(requestOMDBUrl)
     .then(function(response) {
@@ -112,7 +112,7 @@ function getOMDBApi (heroInput) {
         movieBox.appendChild(moviePlot);
     })
 
-    requestOMDBUrl = "http://www.omdbapi.com/?t=" + heroInput + "&type=series&apikey=" + OMDBkey;
+    requestOMDBUrl = "https://www.omdbapi.com/?t=" + heroInput + "&type=series&apikey=" + OMDBkey;
     fetch(requestOMDBUrl)
     .then(function(response) {
         return response.json();
@@ -149,7 +149,12 @@ function localStorageHandling(heroInput) {
     historyBox.appendChild(disclaimer);
 
     if(history) {
-        if(history.length >= 2) {
+        if(history.length == 1) {
+            if(newInput == history[0]) {
+                history.push(newInput);
+            }
+        }
+        else if(history.length >= 2) {
             if(newInput != history[1] && newInput != history[2]) {
                 history[0] = history[1];
                 history[1] = history[2];
@@ -170,7 +175,9 @@ function localStorageHandling(heroInput) {
         newElement.classList.add("waves-dark");
         newElement.textContent = i;
         newElement.href = "./character.html?q=" + i;
-        historyBox.appendChild(newElement);
+        if(i != "null" && i!="Null" && i!="undefined" && i!=" ") {
+            historyBox.appendChild(newElement);
+        }
     }
 
     localStorage.setItem("searchHistory", JSON.stringify(history));
