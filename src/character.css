@@ -77,9 +77,24 @@ footer {
     margin-right: 10px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   footer {
     position: absolute;
+  }
+
+  #comics img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #history {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #history a {
+    margin: 5px;
   }
 }
 
@@ -87,6 +102,15 @@ footer {
   #center {
     display: flex;
     justify-content: center;
+  }
+
+  #history {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #history a {
+    margin: 5px;
   }
 }
 
