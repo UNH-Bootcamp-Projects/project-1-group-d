@@ -113,16 +113,16 @@ function getOMDBApi (heroInput) {
         } else {
             var disclaimer = document.createElement("h5");
             disclaimer.textContent = "There are no movie results.";
-            seriesBox.appendChild(disclaimer)
+            movieBox.appendChild(disclaimer)
 
-            var seriesMessage = document.createElement("p");
-            seriesMessage.textContent = "This will be updated when " + heroInput + " gets their own movie!";
-            seriesBox.appendChild(seriesMessage);
+            var movieMessage = document.createElement("p");
+            movieMessage.textContent = "This will be updated when " + heroInput.replace("%20", " ") + " gets their own movie!";
+            movieBox.appendChild(movieMessage);
         }
         
     })
 
-    requestOMDBUrl = "https://www.omdbapi.com/?t=" + heroInput + "&type=series&apikey=" + OMDBkey;
+    requestOMDBUrl = "https://www.omdbapi.com/?t=" + heroInput.replace("%20", " ") + "&type=series&apikey=" + OMDBkey;
     fetch(requestOMDBUrl)
     .then(function(response) {
         return response.json();
