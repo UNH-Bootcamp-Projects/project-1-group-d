@@ -23,7 +23,7 @@ header {
   top: 0px;
   width: 100%;
   background-color: #333;
-  background-image: radial-gradient( circle, rgb(110, 110, 110) 5%, rgba(51, 51, 51) 95% );
+  background-image: radial-gradient( circle, rgb(110, 110, 110, .5) 15%, rgb(24, 24, 24, .3) 85% );
   color: #fff;
 
 }
@@ -80,7 +80,6 @@ main {
   background-color: rgb(182, 10, 10) !important;
 }
 
-/* Buzz Out */
 @-webkit-keyframes hvr-buzz-out {
   10% {
     -webkit-transform: translateX(3px) rotate(2deg);

@@ -7,9 +7,6 @@
 
 body {
     font-family: 'Scada', sans-serif;
-}
-
-main {
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/OpenGraph-TW-1200x630.png');
     background-position: center;
     background-size: cover;
@@ -48,6 +45,9 @@ a:hover {
   size: 75%;
   background-color: white;
   background-image: radial-gradient( circle, white 5%, rgb(196, 195, 195) 95%);
+  border-color: black;
+  border-style: groove;
+  border-width: 5px;
 }
 
 #charimg img, #bio img, #media img, #titular-series img, #titular-movie img {
