@@ -89,3 +89,15 @@ footer {
   }
 }
 
+@media screen and (max-width: 600px) {
+  #comics, #history {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  h5 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

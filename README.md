@@ -3,7 +3,7 @@
 ## Authors
 - Marla Jane Caram
 - Thomas Siopes
-- Josh Figeureo
+- Josh Figuereo
 - Alan Balcom
 
 ![DareDEVils Archive Image](src/images/rm1.png)
