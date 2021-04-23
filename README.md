@@ -20,6 +20,8 @@ The Marvel franchise is globally recognized as the most popular comic story-line
 - CSS3
 - Javascript
 - Moment.js
+- Marvel API
+- OMDB API
 
 ![DareDEVils Archive Image](src/images/rm2.png)
 
