@@ -83,7 +83,7 @@ function getMarvelApi (heroInput) {
 
 function getOMDBApi (heroInput) {
     let OMDBkey = "9bb482ed"
-    let requestOMDBUrl = "http://www.omdbapi.com/?t=" + heroInput + "&type=movie&apikey=" + OMDBkey;
+    let requestOMDBUrl = "https://www.omdbapi.com/?t=" + heroInput + "&type=movie&apikey=" + OMDBkey;
 
     fetch(requestOMDBUrl)
     .then(function(response) {
@@ -112,7 +112,7 @@ function getOMDBApi (heroInput) {
         movieBox.appendChild(moviePlot);
     })
 
-    requestOMDBUrl = "http://www.omdbapi.com/?t=" + heroInput + "&type=series&apikey=" + OMDBkey;
+    requestOMDBUrl = "https://www.omdbapi.com/?t=" + heroInput + "&type=series&apikey=" + OMDBkey;
     fetch(requestOMDBUrl)
     .then(function(response) {
         return response.json();
