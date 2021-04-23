@@ -35,7 +35,7 @@ header {
 
 header h1 {
   font-size: 3rem;
-  margin-top: 5px;
+  margin: 15px;
 }
 
 span {
@@ -78,6 +78,7 @@ main {
   color: yellow;
   border: 1px solid yellow;
   background-color: rgb(182, 10, 10) !important;
+  font-size: 1.25rem;
 }
 
 /* Buzz Out */
@@ -183,7 +184,6 @@ main {
   animation-iteration-count: 1;
 }
 
-
 label {
   text-align: center;
   margin: 0;
@@ -215,36 +215,25 @@ img {
 
 @media screen and (max-width: 400px) {
   .options {
-    width: 200px;
+    width: 210px;
+    height: 320px
+  }
+
+  #input-form {
+    width: 120px;
+    
   }
 
   #button {
-    width: 100px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .options {
-    width: 200px;
-  }
-
-  #button {
-    width: 100px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .options {
-    width: 200px;
-    height: 420px
-  }
-
-  #button {
-    width: 100px;
+    width: 50px;
   }
 
   #time {
     display: none;
+  }
+
+  .hulk {
+    margin-top: -5px;
   }
 }
 
@@ -284,13 +273,9 @@ footer img {
   margin-bottom: 10px
 }
 
-@media screen and (max-width: 1000px) {
-  footer {
-    position: absolute;
-    bottom: 0;
-  }
+@media screen and (max-width: 700px) {
 
-  img {
+  .img {
     display: none;
   }
 }

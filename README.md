@@ -4,6 +4,7 @@
 - Marla Jane Caram
 - Thomas Siopes
 - Josh Figeureo
+- Alan Balcom
 
 ![DareDEVils Archive Image](src/images/rm1.png)
 
@@ -19,6 +20,8 @@ The Marvel franchise is globally recognized as the most popular comic story-line
 - CSS3
 - Javascript
 - Moment.js
+
+![DareDEVils Archive Image](src/images/rm2.png)
 
 ## Instructions
 
