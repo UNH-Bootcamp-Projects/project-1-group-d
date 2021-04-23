@@ -225,7 +225,12 @@ img {
   }
 
   #button {
-    width: 50px;
+    width: 90px;
+    margin-left: -15px;
+  }
+
+  .submit {
+    width: 150px
   }
 
   #time {
@@ -234,6 +239,7 @@ img {
 
   .hulk {
     margin-top: -5px;
+    margin-left: -20px
   }
 }
 
