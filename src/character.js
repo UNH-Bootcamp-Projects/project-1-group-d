@@ -149,7 +149,7 @@ function localStorageHandling(heroInput) {
     historyBox.appendChild(disclaimer);
 
     if(history) {
-        if(history.length >= 2) {
+        if(history.length > 2) {
             if(newInput != history[1] && newInput != history[2]) {
                 history[0] = history[1];
                 history[1] = history[2];
