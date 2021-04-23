@@ -175,7 +175,7 @@ function localStorageHandling(heroInput) {
         newElement.classList.add("waves-dark");
         newElement.textContent = i;
         newElement.href = "./character.html?q=" + i;
-        if(i != "null" && i!="Null" && i!="undefined" && i!=" ") {
+        if(i != "null" && i!="Null" && i!="undefined" && i!=" " && i!="") {
             historyBox.appendChild(newElement);
         }
     }
