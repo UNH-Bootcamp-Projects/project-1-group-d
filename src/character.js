@@ -149,12 +149,7 @@ function localStorageHandling(heroInput) {
     historyBox.appendChild(disclaimer);
 
     if(history) {
-        if(history.length == 1) {
-            if(newInput == history[0]) {
-                history.push(newInput);
-            }
-        }
-        else if(history.length >= 2) {
+        if(history.length >= 2) {
             if(newInput != history[1] && newInput != history[2]) {
                 history[0] = history[1];
                 history[1] = history[2];
@@ -175,9 +170,7 @@ function localStorageHandling(heroInput) {
         newElement.classList.add("waves-dark");
         newElement.textContent = i;
         newElement.href = "./character.html?q=" + i;
-        if(i != "null" && i!="Null" && i!="undefined" && i!=" " && i!="") {
-            historyBox.appendChild(newElement);
-        }
+        historyBox.appendChild(newElement);
     }
 
     localStorage.setItem("searchHistory", JSON.stringify(history));
