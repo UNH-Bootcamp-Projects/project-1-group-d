@@ -8,6 +8,7 @@
 
 ![DareDEVils Archive Image](src/images/rm1.png)
 
+Link to powerpoint presentation: (https://docs.google.com/presentation/d/1Xm67ZkYX-yv3LFSPNopChIwCWVONyd0JIL5US8EmtzE/edit?usp=sharing)
 Link to live website: (https://unh-bootcamp-projects.github.io/project-1-group-d/)
 
 ## Purpose
