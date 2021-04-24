@@ -42,6 +42,11 @@ a:hover {
   color: yellow;
 }
 
+#comics {
+  height: 1200px;
+  overflow-y: auto;
+}
+
 .card {
   box-shadow: 10px 10px 20px black;
   size: 75%;
@@ -85,6 +90,10 @@ footer {
   #comics img {
     width: 100%;
   }
+  #comics {
+    height: 850px;
+    overflow-y: auto;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -124,5 +133,9 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+  #comics {
+    height: 500px;
+    overflow-y: auto;
   }
 }
